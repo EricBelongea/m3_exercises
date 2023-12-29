@@ -1,11 +1,11 @@
 require './spec/spec_helper'
-require './musix_match_service'
+# require './musix_match_service'
 
 describe MusixMatchService do
 
   it 'can find a list of music genres' do
     response = MusixMatchService.music_genres
-
+    require 'pry'; binding.pry
     expect(response).to have_key("message")
     expect(response["message"]).to have_key("body")
     expect(response["message"]["body"]).to have_key("music_genre_list")
